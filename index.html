@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAS Library Catalog - Harry Potter Collection</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img id="school-logo" src="images/images.png" alt="Zahraa American School Logo">
+            <h1>ZAS Library Catalogue</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://www.facebook.com/ElZahraaAmericanDivision?locale" target="_blank">Facebook</a></li>
+                <li><a href="https://schooleverywhere-elzahraa.com/schooleverywhere/" target="_blank">System</a></li>
+                <li><a href="borrowing.html">Borrowing Rules</a></li>
+                <li><a href="about.html">Can't find a book?</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- Search Bar Section -->
+<section class="search-container">
+    <form id="search-form">
+        <input type="text" id="search-input" placeholder="Search our library collection...">
+        <div class="advanced-search">
+            <select id="category-filter">
+                <option value="">All Categories</option>
+                <option value="fiction">Fiction</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="young adult">Young Adult</option>
+                <option value="adventure">Adventure</option>
+                <option value="comedy">Comedy</option>
+                <option value="mystery">Mystery</option>
+                <option value="romance">Romance</option>
+                <option value="drama">Drama</option>
+                <option value="classic">Classic</option>
+                <option value="dystopian">Dystopian</option>
+                <option value="reference">Education</option>
+                <option value="Children">Children</option>
+                <option value="horror">Horror</option>
+                <option value="Memoir">Memoir</option>
+                <option value="self">Self Help</option>
+                <option value="ps">Psychology</option>
+
+            </select>
+            <button type="submit" id="search-button">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </div>
+    </form>
+</section>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Featured Collection Section -->
+        <section class="featured-books">
+            <h2>Library Book Collection</h2>
+            <div class="collection-intro">
+                <p>These books are available for students to borrow, simply consult Ms.Agnis during the break</p>
+            </div>
+            <div class="book-grid">
+                <!-- Book cards will be added here dynamically -->
+            </div>
+        </section>
+
+        <!-- Popular Categories Section -->
+        <section class="popular-categories">
+            <h2>Explore Our Library Collections</h2>
+            <div class="category-grid">
+                <a href="genre.html?genre=fiction" class="category-card">
+                    <i class="fas fa-book"></i>
+                    <h3>Harry Potter Collection</h3>
+                </a>
+                <a href="genre.html?genre=nonfiction" class="category-card">
+                    <i class="fas fa-microscope"></i>
+                    <h3>Shakespeare Collection</h3>
+                </a>
+                <a href="genre.html?genre=reference" class="category-card">
+                    <i class="fas fa-atlas"></i>
+                    <h3>Reference Materials</h3>
+                    <p>(for your projects)</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Library Information Section -->
+        <section class="library-info">
+            <h2>ZAS Library Information</h2>
+            <div class="info-cards">
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Library Availability</h3>
+                    <p>You can visit the library everyday during breaks</p>
+                    <p></p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-book-reader"></i>
+                    <h3>Remember to bring the books back!</h3>
+                    <p>its necassary to keep them in good shape</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-question-circle"></i>
+                    <h3>Need Help?</h3>
+                    <p>Ask Mrs. Agnis, our librarian!</p>
+                    <p>Email: yehia8735@gmail.com</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Book Details Template (For individual book page) -->
+    <div class="book-details-container" style="display: none;">
+        <div class="book-details">
+            <div class="book-cover-large">
+                <img src="images/book1-large.jpg" alt="Book Title">
+            </div>
+            <div class="book-details-info">
+                <h1 class="book-title">Book Title</h1>
+                <p class="book-author">By <a href="author.html?name=Author%20Name">Author Name</a></p>
+                <div class="book-metadata">
+                    <span class="book-genre">Fiction</span>
+                    <span class="book-publish-date">Published: January 2023</span>
+                    <span class="book-grade-level">Grade Level: Middle School</span>
+                </div>
+                <div class="book-availability">
+                    <span class="status available">Available for Borrowing</span>
+                    <p class="call-number">Call Number: <strong>F ROW</strong></p>
+                    <p class="location">Location: <strong>Fiction Section, Shelf 3</strong></p>
+                </div>
+                <div class="book-description">
+                    <h3>Description</h3>
+                    <p>Book description goes here.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="book-additional-info">
+            <div class="book-details-tabs">
+                <button class="tab-button active" data-tab="details">Details</button>
+                <button class="tab-button" data-tab="borrowing">Borrowing History</button>
+                <button class="tab-button" data-tab="similar">Similar Books</button>
+            </div>
+            
+            <div class="tab-content active" id="details-tab">
+                <h3>Additional Details</h3>
+                <ul>
+                    <li><strong>Number of Pages:</strong> Pages</li>
+                    <li><strong>Publisher:</strong> Publisher</li>
+                    <li><strong>ISBN:</strong> ISBN Number</li>
+                    <li><strong>Language:</strong> Language</li>
+                    <li><strong>Copies Available:</strong> Number of copies</li>
+                </ul>
+            </div>
+            
+            <div class="tab-content" id="borrowing-tab">
+                <h3>Recent Borrowing Status</h3>
+                <div class="borrowing-status">
+                    <p class="current-status">Currently Available</p>
+                    <p class="return-date">Expected Return: N/A</p>
+                    <p class="hold-info">On Hold: No</p>
+                </div>
+                <div class="borrowing-rules">
+                    <h4>Borrowing Rules</h4>
+                    <ul>
+                        <li>Students may borrow this book for 2 weeks</li>
+                        <li>Renewable once if no one is waiting</li>
+                        <li>Late fee: 0.50 per day</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="similar-tab">
+                <h3>Similar Books in Our Collection</h3>
+                <div class="similar-books-grid">
+                    <!-- Similar book suggestions will go here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>ZAS Library</h3>
+                <p>"If you dont like reading, Then you just havent found the right book!"</p>
+                <img src="images/images.png" alt="ZAS Logo" class="footer-logo">
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/ElZahraaAmericanDivision?locale" target="_blank">School Facebook</a></li>
+                    <li><a href="https://schooleverywhere-elzahraa.com/schooleverywhere/" target="_blank">School System</a></li>
+                    <li><a href="borrowing.html">Borrowing & Library Rules</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Zahraa American School Library</p>
+                <p><i class="fas fa-phone"></i> Ms.Agnis: 01025747714</p>
+                <p><i class="fas fa-envelope"></i> yehia8735@gmail.com </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Zahraa American School Library.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="logic.js"></script>
+</body>
+</html>
